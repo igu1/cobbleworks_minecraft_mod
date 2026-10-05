@@ -1,0 +1,1 @@
+A compact cobblestone generator powered by reusable water and lava buckets. Flip a lever, connect storage, and spend less time mining and more time building.

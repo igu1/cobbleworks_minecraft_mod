@@ -18,15 +18,35 @@ def write(path, value):
     path.write_text(json.dumps(value, indent=2) + '\n')
 
 
+def material_uv(element, side, tile=None):
+    """Keep two authored pixels per model unit, including animated fluids.
+
+    Material tiles are 32 authored pixels doubled to 64 bitmap pixels. Static
+    atlas UVs span 4 logical units per tile; standalone fluid UVs span 16.
+    """
+    size = [b - a for a, b in zip(element['from'], element['to'])]
+    axes = (0, 2) if side in ('up', 'down') else (2, 1) if side in ('east', 'west') else (0, 1)
+    width, height = [size[axis] for axis in axes]
+    u, v = (16 - width) / 2, (16 - height) / 2
+    if tile is None:
+        return [u, v, u + width, v + height]
+    base_u, base_v = tile % 4 * 4, tile // 4 * 4
+    return [base_u + u / 4, base_v + v / 4,
+            base_u + (u + width) / 4, base_v + (v + height) / 4]
+
+
 def export():
     source = json.loads((ROOT / 'art/blockbench/cobble_generator.json').read_text())
+    # Reloading a texture in Blockbench can clear its export folder. Bind the
+    # atlas to its packaged location instead of inheriting that editor metadata.
+    source['textures']['0'] = 'cobbleworks:block/cobbleworks_atlas'
     atlas = Image.open(ASSETS / 'textures/block/cobbleworks_atlas.png').convert('RGBA')
     for fluid, tile in [('water', 6), ('lava', 7)]:
-        x, y = tile % 4 * 32, tile // 4 * 32
-        painted = atlas.crop((x, y, x + 32, y + 32))
-        frames = Image.new('RGBA', (32, 128))
+        x, y = tile % 4 * 64, tile // 4 * 64
+        painted = atlas.crop((x, y, x + 64, y + 64))
+        frames = Image.new('RGBA', (64, 256))
         for frame in range(4):
-            frames.paste(ImageChops.offset(painted, 0, frame * 2), (0, frame * 32))
+            frames.paste(ImageChops.offset(painted, 0, frame * 2), (0, frame * 64))
         path = ASSETS / f'textures/block/bb_{fluid}_flow.png'
         frames.save(path)
         write(Path(str(path) + '.mcmeta'), {'animation': {'frametime': 5, 'interpolate': True}})
@@ -48,18 +68,16 @@ def export():
                         fluid = 'water' if e['name'].startswith('Water') else 'lava'
                         filled = water if fluid == 'water' else lava
                         tile = (6 if fluid == 'water' else 7) if filled else (8 if fluid == 'water' else 9)
-                        for face in e['faces'].values():
+                        for side, face in e['faces'].items():
                             if filled and phase == 'running':
                                 model['textures'][fluid] = f'cobbleworks:block/bb_{fluid}_flow'
-                                face.update(texture='#' + fluid, uv=[0, 0, 16, 16])
+                                face.update(texture='#' + fluid, uv=material_uv(e, side))
                             else:
-                                u, v = tile % 4 * 4, tile // 4 * 4
-                                face.update(texture='#0', uv=[u, v, u + 4, v + 4])
+                                face.update(texture='#0', uv=material_uv(e, side, tile))
                     elif e['name'] == 'Status indicator':
                         tile = {'waiting': 13, 'running': 10, 'paused': 12, 'full': 11}[phase]
-                        u, v = tile % 4 * 4, tile // 4 * 4
-                        for face in e['faces'].values():
-                            face['uv'] = [u, v, u + 4, v + 4]
+                        for side, face in e['faces'].items():
+                            face['uv'] = material_uv(e, side, tile)
                 name = f'cobble_generator_{phase}_w{int(water)}_l{int(lava)}'
                 write(ASSETS / f'models/block/{name}.json', model)
                 for facing, angle in [('north', 0), ('east', 90), ('south', 180), ('west', 270)]:
