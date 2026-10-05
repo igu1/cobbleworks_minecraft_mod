@@ -1,0 +1,38 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+run-gametest
+
+# stonecutter per-version build outputs
+versions/
+
+# local editor config
+.vscode/
+
+# Python asset-tool cache (keep original artwork tooling reproducible)
+__pycache__/
+
+# generated datagen cache
+src/generated/resources/.cache/
+
+# collected release builds
+builds/

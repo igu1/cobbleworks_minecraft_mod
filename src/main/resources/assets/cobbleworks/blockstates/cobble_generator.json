@@ -1,0 +1,260 @@
+{
+  "variants": {
+    "facing=north,lava=false,phase=waiting,water=false": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w0_l0",
+      "y": 0
+    },
+    "facing=east,lava=false,phase=waiting,water=false": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w0_l0",
+      "y": 90
+    },
+    "facing=south,lava=false,phase=waiting,water=false": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w0_l0",
+      "y": 180
+    },
+    "facing=west,lava=false,phase=waiting,water=false": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w0_l0",
+      "y": 270
+    },
+    "facing=north,lava=true,phase=waiting,water=false": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w0_l1",
+      "y": 0
+    },
+    "facing=east,lava=true,phase=waiting,water=false": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w0_l1",
+      "y": 90
+    },
+    "facing=south,lava=true,phase=waiting,water=false": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w0_l1",
+      "y": 180
+    },
+    "facing=west,lava=true,phase=waiting,water=false": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w0_l1",
+      "y": 270
+    },
+    "facing=north,lava=false,phase=waiting,water=true": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w1_l0",
+      "y": 0
+    },
+    "facing=east,lava=false,phase=waiting,water=true": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w1_l0",
+      "y": 90
+    },
+    "facing=south,lava=false,phase=waiting,water=true": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w1_l0",
+      "y": 180
+    },
+    "facing=west,lava=false,phase=waiting,water=true": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w1_l0",
+      "y": 270
+    },
+    "facing=north,lava=true,phase=waiting,water=true": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w1_l1",
+      "y": 0
+    },
+    "facing=east,lava=true,phase=waiting,water=true": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w1_l1",
+      "y": 90
+    },
+    "facing=south,lava=true,phase=waiting,water=true": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w1_l1",
+      "y": 180
+    },
+    "facing=west,lava=true,phase=waiting,water=true": {
+      "model": "cobbleworks:block/cobble_generator_waiting_w1_l1",
+      "y": 270
+    },
+    "facing=north,lava=false,phase=running,water=false": {
+      "model": "cobbleworks:block/cobble_generator_running_w0_l0",
+      "y": 0
+    },
+    "facing=east,lava=false,phase=running,water=false": {
+      "model": "cobbleworks:block/cobble_generator_running_w0_l0",
+      "y": 90
+    },
+    "facing=south,lava=false,phase=running,water=false": {
+      "model": "cobbleworks:block/cobble_generator_running_w0_l0",
+      "y": 180
+    },
+    "facing=west,lava=false,phase=running,water=false": {
+      "model": "cobbleworks:block/cobble_generator_running_w0_l0",
+      "y": 270
+    },
+    "facing=north,lava=true,phase=running,water=false": {
+      "model": "cobbleworks:block/cobble_generator_running_w0_l1",
+      "y": 0
+    },
+    "facing=east,lava=true,phase=running,water=false": {
+      "model": "cobbleworks:block/cobble_generator_running_w0_l1",
+      "y": 90
+    },
+    "facing=south,lava=true,phase=running,water=false": {
+      "model": "cobbleworks:block/cobble_generator_running_w0_l1",
+      "y": 180
+    },
+    "facing=west,lava=true,phase=running,water=false": {
+      "model": "cobbleworks:block/cobble_generator_running_w0_l1",
+      "y": 270
+    },
+    "facing=north,lava=false,phase=running,water=true": {
+      "model": "cobbleworks:block/cobble_generator_running_w1_l0",
+      "y": 0
+    },
+    "facing=east,lava=false,phase=running,water=true": {
+      "model": "cobbleworks:block/cobble_generator_running_w1_l0",
+      "y": 90
+    },
+    "facing=south,lava=false,phase=running,water=true": {
+      "model": "cobbleworks:block/cobble_generator_running_w1_l0",
+      "y": 180
+    },
+    "facing=west,lava=false,phase=running,water=true": {
+      "model": "cobbleworks:block/cobble_generator_running_w1_l0",
+      "y": 270
+    },
+    "facing=north,lava=true,phase=running,water=true": {
+      "model": "cobbleworks:block/cobble_generator_running_w1_l1",
+      "y": 0
+    },
+    "facing=east,lava=true,phase=running,water=true": {
+      "model": "cobbleworks:block/cobble_generator_running_w1_l1",
+      "y": 90
+    },
+    "facing=south,lava=true,phase=running,water=true": {
+      "model": "cobbleworks:block/cobble_generator_running_w1_l1",
+      "y": 180
+    },
+    "facing=west,lava=true,phase=running,water=true": {
+      "model": "cobbleworks:block/cobble_generator_running_w1_l1",
+      "y": 270
+    },
+    "facing=north,lava=false,phase=paused,water=false": {
+      "model": "cobbleworks:block/cobble_generator_paused_w0_l0",
+      "y": 0
+    },
+    "facing=east,lava=false,phase=paused,water=false": {
+      "model": "cobbleworks:block/cobble_generator_paused_w0_l0",
+      "y": 90
+    },
+    "facing=south,lava=false,phase=paused,water=false": {
+      "model": "cobbleworks:block/cobble_generator_paused_w0_l0",
+      "y": 180
+    },
+    "facing=west,lava=false,phase=paused,water=false": {
+      "model": "cobbleworks:block/cobble_generator_paused_w0_l0",
+      "y": 270
+    },
+    "facing=north,lava=true,phase=paused,water=false": {
+      "model": "cobbleworks:block/cobble_generator_paused_w0_l1",
+      "y": 0
+    },
+    "facing=east,lava=true,phase=paused,water=false": {
+      "model": "cobbleworks:block/cobble_generator_paused_w0_l1",
+      "y": 90
+    },
+    "facing=south,lava=true,phase=paused,water=false": {
+      "model": "cobbleworks:block/cobble_generator_paused_w0_l1",
+      "y": 180
+    },
+    "facing=west,lava=true,phase=paused,water=false": {
+      "model": "cobbleworks:block/cobble_generator_paused_w0_l1",
+      "y": 270
+    },
+    "facing=north,lava=false,phase=paused,water=true": {
+      "model": "cobbleworks:block/cobble_generator_paused_w1_l0",
+      "y": 0
+    },
+    "facing=east,lava=false,phase=paused,water=true": {
+      "model": "cobbleworks:block/cobble_generator_paused_w1_l0",
+      "y": 90
+    },
+    "facing=south,lava=false,phase=paused,water=true": {
+      "model": "cobbleworks:block/cobble_generator_paused_w1_l0",
+      "y": 180
+    },
+    "facing=west,lava=false,phase=paused,water=true": {
+      "model": "cobbleworks:block/cobble_generator_paused_w1_l0",
+      "y": 270
+    },
+    "facing=north,lava=true,phase=paused,water=true": {
+      "model": "cobbleworks:block/cobble_generator_paused_w1_l1",
+      "y": 0
+    },
+    "facing=east,lava=true,phase=paused,water=true": {
+      "model": "cobbleworks:block/cobble_generator_paused_w1_l1",
+      "y": 90
+    },
+    "facing=south,lava=true,phase=paused,water=true": {
+      "model": "cobbleworks:block/cobble_generator_paused_w1_l1",
+      "y": 180
+    },
+    "facing=west,lava=true,phase=paused,water=true": {
+      "model": "cobbleworks:block/cobble_generator_paused_w1_l1",
+      "y": 270
+    },
+    "facing=north,lava=false,phase=full,water=false": {
+      "model": "cobbleworks:block/cobble_generator_full_w0_l0",
+      "y": 0
+    },
+    "facing=east,lava=false,phase=full,water=false": {
+      "model": "cobbleworks:block/cobble_generator_full_w0_l0",
+      "y": 90
+    },
+    "facing=south,lava=false,phase=full,water=false": {
+      "model": "cobbleworks:block/cobble_generator_full_w0_l0",
+      "y": 180
+    },
+    "facing=west,lava=false,phase=full,water=false": {
+      "model": "cobbleworks:block/cobble_generator_full_w0_l0",
+      "y": 270
+    },
+    "facing=north,lava=true,phase=full,water=false": {
+      "model": "cobbleworks:block/cobble_generator_full_w0_l1",
+      "y": 0
+    },
+    "facing=east,lava=true,phase=full,water=false": {
+      "model": "cobbleworks:block/cobble_generator_full_w0_l1",
+      "y": 90
+    },
+    "facing=south,lava=true,phase=full,water=false": {
+      "model": "cobbleworks:block/cobble_generator_full_w0_l1",
+      "y": 180
+    },
+    "facing=west,lava=true,phase=full,water=false": {
+      "model": "cobbleworks:block/cobble_generator_full_w0_l1",
+      "y": 270
+    },
+    "facing=north,lava=false,phase=full,water=true": {
+      "model": "cobbleworks:block/cobble_generator_full_w1_l0",
+      "y": 0
+    },
+    "facing=east,lava=false,phase=full,water=true": {
+      "model": "cobbleworks:block/cobble_generator_full_w1_l0",
+      "y": 90
+    },
+    "facing=south,lava=false,phase=full,water=true": {
+      "model": "cobbleworks:block/cobble_generator_full_w1_l0",
+      "y": 180
+    },
+    "facing=west,lava=false,phase=full,water=true": {
+      "model": "cobbleworks:block/cobble_generator_full_w1_l0",
+      "y": 270
+    },
+    "facing=north,lava=true,phase=full,water=true": {
+      "model": "cobbleworks:block/cobble_generator_full_w1_l1",
+      "y": 0
+    },
+    "facing=east,lava=true,phase=full,water=true": {
+      "model": "cobbleworks:block/cobble_generator_full_w1_l1",
+      "y": 90
+    },
+    "facing=south,lava=true,phase=full,water=true": {
+      "model": "cobbleworks:block/cobble_generator_full_w1_l1",
+      "y": 180
+    },
+    "facing=west,lava=true,phase=full,water=true": {
+      "model": "cobbleworks:block/cobble_generator_full_w1_l1",
+      "y": 270
+    }
+  }
+}

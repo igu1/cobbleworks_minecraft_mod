@@ -1,0 +1,9 @@
+mod.id = "cobbleworks"
+mod.name = "Cobbleworks"
+mod.group = "me.ez.cobbleworks"
+mod.version = "1.0.0"
+
+["26.1.2"]
+mod.mc_compat = "[26.1.2,26.1.3)"
+mod.mc_releases = ["26.1.2"]
+deps.neo_loader = "26.1.2.108"

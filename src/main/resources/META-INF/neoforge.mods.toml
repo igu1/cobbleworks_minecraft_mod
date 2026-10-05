@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="All rights reserved"
+
+[[mods]]
+modId="cobbleworks"
+version="${file.jarVersion}"
+displayName="Cobbleworks"
+logoFile="logo.png"
+authors="Love, Cheese By Ez"
+description='''
+An endless cobblestone workshop. Reusable water/lava bucket slots, animated controls,
+hopper automation, transactional item-handler support and configurable redstone modes.
+'''
+
+[[dependencies.cobbleworks]]
+modId="neoforge"
+type="required"
+versionRange="[26.1.2.108,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.cobbleworks]]
+modId="minecraft"
+type="required"
+versionRange="[26.1.2,26.1.3)"
+ordering="NONE"
+side="BOTH"
